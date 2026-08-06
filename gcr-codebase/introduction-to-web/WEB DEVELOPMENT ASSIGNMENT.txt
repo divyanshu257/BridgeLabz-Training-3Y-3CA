@@ -1,0 +1,108 @@
+WEB DEVELOPMENT ASSIGNMENT
+
+Q1. Difference between Frontend, Backend and Full-Stack Development
+
+Frontend Development: Frontend is the part of a website that users see
+and interact with. It is built using HTML, CSS and JavaScript.
+
+eg- On Amazon, the product images, search bar, and "Add to Cart" button are part of the frontend.
+
+Backend Development: Backend is the part that works behind the scenes.
+It processes requests, stores data and connects with the database.
+
+eg-When you log in to Amazon or place an order, the backend verifies your account, stores your order, and processes the payment.
+
+Full-Stack Development: A full-stack developer works on both the
+frontend and backend.
+
+eg - A full-stack developer can build a complete online shopping website, including the user interface, server, database, and order processing system.
+
+Q2. Simple Client-Server Diagram
+
++------------+      HTTP Request      +------------+
+|   Client   | ---------------------> |   Server   |
+| (Browser)  |                        | (Website)  |
++------------+ <--------------------- +------------+
+                    HTTP Response
+
+
+Q3. How a Browser Displays a Web Page
+
+1.  The user enters a website address.
+2.  The browser sends a request to the web server.
+3.  The server processes the request.
+4.  If needed, the server gets data from the database.
+5.  The server sends HTML, CSS and JavaScript files.
+6.  The browser reads these files and displays the webpage.
+
+Q4. Tools Required for Web Development
+
+• Visual Studio Code - Used to write code. • Google Chrome or Firefox -
+Used to test websites. • Node.js - Runs JavaScript outside the browser.
+• npm - Installs JavaScript packages. • Git - Tracks code changes. •
+GitHub - Stores projects online. • Live Server - Refreshes the webpage
+automatically while coding.
+
+Q5. What is a Web Server?
+
+A web server is software that receives requests from a browser and sends
+the required web pages back.
+
+Examples: Apache, Nginx, Microsoft IIS and LiteSpeed.
+
+Q6. Roles in a Web Development Project
+
+Frontend Developer: Creates the user interface and makes the website
+responsive.
+
+Backend Developer: Develops the server-side logic, APIs and connects the
+application with the database.
+
+Database Administrator (DBA): Manages the database, performs backups and
+keeps the data secure.
+
+Q7. VS Code Setup
+
+1.  Install Visual Studio Code.
+2.  Install the Live Server extension.
+3.  Create these files:
+    -   index.html
+    -   style.css
+    -   script.js
+4.  Open index.html using Live Server.
+
+See the screenshot->
+
+Q8. Difference Between Static and Dynamic Websites
+
+Static Website: The content remains the same for every user. Example:
+Personal portfolio website.
+
+Dynamic Website: The content changes based on users or database data.
+Example: Facebook, Amazon and Instagram.
+
+Q9. Five Web Browsers and Their Rendering Engines
+
+Google Chrome - Blink Microsoft Edge - Blink Mozilla Firefox - Gecko
+Safari - WebKit Opera - Blink
+
+Rendering engines convert HTML, CSS and JavaScript into the webpage
+shown in the browser.
+
+Q10. Basic Web Architecture Diagram
+
+Basic Web Architecture
+
+Client (Browser)
+       │
+       ▼
+   Request
+       │
+       ▼
+Server (Website)
+       │
+       ▲
+   Response
+       │
+       ▲
+Client (Browser)
