@@ -1,0 +1,187 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1e293b;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;           
+
+    background-color: #0f172a;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 5%;            
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;        
+}
+
+nav {
+    display: flex;
+    gap: 2em;                 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding-top: 70px;
+}
+
+/* Introduction */
+.intro {
+    min-height: 80vh;          
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 40px 8%;
+}
+
+.bio {
+    width: 50%;                
+}
+
+.bio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.bio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+    max-width: 600px;
+}
+
+button {
+    padding: 12px 24px;        
+    border: none;
+    border-radius: 6px;
+
+    background-color: #0284c7;
+    color: white;
+
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0369a1;
+}
+
+/* Profile Image */
+.profile img {
+    width: 250px;              
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 5px solid #0284c7;
+}
+
+
+.about {
+    padding: 60px 10%;
+    text-align: center;
+
+    background-color: #e0f2fe;
+}
+
+.about h2,
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+}
+
+.about p {
+    font-size: 1.1rem;
+}
+
+
+.contact {
+    padding: 60px 10%;
+    text-align: center;
+
+    background-color: #f8fafc;
+}
+
+
+footer {
+    background-color: #0f172a;
+    color: white;
+
+    text-align: center;
+    padding: 20px;
+
+    font-size: 0.9rem;
+}
+
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 3%;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        gap: 1em;
+    }
+
+    .intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .bio {
+        width: 90%;
+    }
+
+    .profile img {
+        width: 180px;
+        height: 180px;
+    }
+}
