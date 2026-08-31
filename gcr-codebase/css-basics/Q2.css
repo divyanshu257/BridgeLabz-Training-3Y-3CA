@@ -1,0 +1,265 @@
+/* Basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+}
+
+/* Header */
+header {
+    background-color: #172554;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+    border-bottom: 5px solid #f59e0b;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #fbbf24;
+}
+
+/* Common section styling */
+section {
+    width: 100%;
+    min-height: 400px;
+
+    padding: 80px 10%;
+    margin: 0;
+
+    border-bottom: 5px solid white;
+
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 800px;
+    margin: auto;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Section 1 */
+.hero {
+    min-height: 500px;
+
+    background-image: url("https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-attachment: fixed;
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.hero p {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border: 2px solid white;
+}
+
+/* Section 2 - Linear Gradient */
+.history {
+    background: linear-gradient(
+        120deg,
+        #f97316,
+        #facc15,
+        #fde68a
+    );
+
+    color: #3f1d0b;
+}
+
+.history h2 {
+    font-size: 38px;
+    font-weight: 700;
+}
+
+/* Section 3 - Radial Gradient */
+.places {
+    background: radial-gradient(
+        circle,
+        #dbeafe,
+        #60a5fa,
+        #1e3a8a
+    );
+
+    color: #0f172a;
+}
+
+.places h2 {
+    font-size: 42px;
+    font-weight: 800;
+
+    margin-bottom: 35px;
+}
+
+/* Place cards */
+.place-box {
+    display: inline-block;
+
+    width: 28%;
+    min-height: 180px;
+
+    margin: 15px;
+    padding: 25px;
+
+    background-color: white;
+
+    border: 3px solid #1e3a8a;
+    border-radius: 10px;
+
+    vertical-align: top;
+}
+
+.place-box h3 {
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+.place-box p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Section 4 - Parallax */
+.culture {
+    min-height: 500px;
+
+    background-image: url("https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.culture h2 {
+    font-size: 48px;
+    font-weight: 800;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+.culture p {
+    background-color: rgba(0, 0, 0, 0.65);
+
+    padding: 25px;
+
+    border: 2px solid white;
+}
+
+/* Section 5 - Second Parallax */
+.tourism {
+    min-height: 450px;
+
+    background-image: url("https://images.unsplash.com/photo-1592639296346-560c37a0f711?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+
+    background-attachment: fixed;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tourism h2 {
+    font-size: 45px;
+    font-weight: 900;
+
+    text-shadow: 2px 2px 5px black;
+}
+
+.tourism p {
+    background-color: rgba(0, 0, 0, 0.6);
+
+    padding: 25px;
+
+    border: 2px solid white;
+}
+
+/* Footer */
+footer {
+    background-color: #172554;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 5px solid #f59e0b;
+}
+
+/* Responsive design */
+@media (max-width: 800px) {
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    .place-box {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .culture h2,
+    .tourism h2 {
+        font-size: 35px;
+    }
+}
