@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #222;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      padding: 50px;
+    }
+
+    .about {
+      width: 50%;
+      text-align: center;
+    }
+
+    .about h2 {
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      line-height: 1.6;
+    }
+
+    .image-section {
+      width: 40%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image-section img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about,
+      .image-section {
+        width: 100%;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Divyanshu Baghel</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I am Divyanshu Baghel, a Computer Science student.
+        I am interested in web development and programming.
+        I enjoy learning new technologies and building useful projects.
+      </p>
+    </section>
+
+    <section class="image-section">
+      <img src="https://via.placeholder.com/250" alt="Profile Image">
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Divyanshu Baghel. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

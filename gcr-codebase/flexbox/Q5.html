@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pricing Section</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .pricing {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .card {
+      width: 280px;
+      padding: 35px 20px;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px #ccc;
+
+      transition: 0.3s;
+
+      animation: fadeIn 1s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h2 {
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .middle {
+      background-color: #dceeff;
+      transform: scale(1.08);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 750px) {
+      .pricing {
+        flex-direction: column;
+      }
+
+      .middle {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="pricing">
+
+    <div class="card">
+      <h2>Basic</h2>
+      <p class="price">₹199</p>
+      <p>5 Projects</p>
+      <p>10 GB Storage</p>
+    </div>
+
+    <div class="card middle">
+      <h2>Pro</h2>
+      <p class="price">₹499</p>
+      <p>20 Projects</p>
+      <p>50 GB Storage</p>
+    </div>
+
+    <div class="card">
+      <h2>Premium</h2>
+      <p class="price">₹999</p>
+      <p>Unlimited Projects</p>
+      <p>100 GB Storage</p>
+    </div>
+
+  </section>
+
+</body>
+</html>

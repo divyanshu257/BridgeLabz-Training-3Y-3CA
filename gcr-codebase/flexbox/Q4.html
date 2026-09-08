@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background-color: #f2f2f2;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-template-rows: 70px 1fr;
+      grid-gap: 20px;
+      min-height: 100vh;
+    }
+
+    /* Header */
+    header {
+      grid-column: 1 / -1;
+      background-color: #222;
+      color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Sidebar */
+    aside {
+      background-color: #333;
+      padding: 30px 20px;
+    }
+
+    aside h2 {
+      color: white;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    aside nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    aside a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    aside a:hover {
+      background-color: #555;
+    }
+
+    /* Main Content */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: 0.3s;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Box spanning two columns */
+    .box1 {
+      grid-column: span 2;
+    }
+
+    .box h2 {
+      text-align: center;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      header {
+        grid-column: 1;
+      }
+
+      aside {
+        text-align: center;
+      }
+
+      aside nav {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      .box1 {
+        grid-column: span 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <header>
+      <h1>My Dashboard</h1>
+    </header>
+
+    <aside>
+      <h2>Menu</h2>
+
+      <nav>
+        <a href="#">Dashboard</a>
+        <a href="#">Profile</a>
+        <a href="#">Projects</a>
+        <a href="#">Settings</a>
+      </nav>
+    </aside>
+
+    <main>
+
+      <div class="box box1">
+        <h2>Overview</h2>
+      </div>
+
+      <div class="box">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="box">
+        <h2>Statistics</h2>
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog Layout</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: grid;
+
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 80px 1fr 70px;
+
+      grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+      gap: 20px;
+      padding: 20px;
+    }
+
+    header {
+      grid-area: header;
+      background-color: #222;
+      color: white;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding: 20px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    aside {
+      grid-area: sidebar;
+      background-color: #eee;
+      padding: 20px;
+    }
+
+    aside h2 {
+      margin-bottom: 20px;
+    }
+
+    aside p {
+      margin-bottom: 15px;
+    }
+
+    main {
+      grid-area: main;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .post {
+      padding: 25px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .post h2 {
+      margin-bottom: 15px;
+    }
+
+    footer {
+      grid-area: footer;
+      background-color: #222;
+      color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "footer";
+      }
+
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>My Blog</h1>
+
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <aside>
+      <h2>Categories</h2>
+      <p>Technology</p>
+      <p>Programming</p>
+      <p>Web Development</p>
+      <p>Education</p>
+    </aside>
+
+    <main>
+
+      <article class="post">
+        <h2>Learning HTML</h2>
+        <p>
+          HTML is used to create the structure of web pages.
+          It is one of the basic technologies of web development.
+        </p>
+      </article>
+
+      <article class="post">
+        <h2>Learning CSS</h2>
+        <p>
+          CSS is used to style web pages and create attractive
+          and responsive layouts.
+        </p>
+      </article>
+
+    </main>
+
+    <footer>
+      <p>Contact: example@gmail.com</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
