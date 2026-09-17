@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced CSS Selectors</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    /* Attribute selector */
+    input[type="text"]{
+      padding: 10px;
+      border: 2px solid blue;
+    }
+
+    /* Attribute selector: selects links starting with https */
+    a[href^="https"]{
+      color: green;
+      font-weight: bold;
+    }
+
+    /* Hover pseudo-class */
+    li:hover{
+      background-color: lightblue;
+    }
+
+    /* Focus pseudo-class */
+    input:focus{
+      background-color: lightyellow;
+    }
+
+    /* nth-child pseudo-class */
+    li:nth-child(2){
+      color: red;
+    }
+
+    /* Before pseudo-element */
+    h2::before{
+      content: "★ ";
+      color: orange;
+    }
+
+    /* After pseudo-element */
+    h2::after{
+      content: " ★";
+      color: orange;
+    }
+
+    /* Child combinator */
+    .container > p{
+      color: blue;
+    }
+
+    /* Adjacent sibling combinator */
+    h3 + p{
+      background-color: lightgreen;
+    }
+
+    /* General sibling combinator */
+    h4 ~ p{
+      font-style: italic;
+    }
+
+    /* Descendant combinator */
+    .box span{
+      color: purple;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Advanced CSS Selectors</h2>
+
+  <input type="text" placeholder="Enter your name">
+
+  <br><br>
+
+  <a href="https://google.com">Google</a>
+  <br>
+  <a href="page.html">Local Page</a>
+
+  <ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+  </ul>
+
+  <div class="container">
+    <p>Direct child paragraph</p>
+
+    <div>
+      <p>Nested paragraph</p>
+    </div>
+  </div>
+
+  <h3>Adjacent Sibling</h3>
+  <p>This paragraph comes immediately after h3.</p>
+
+  <h4>General Sibling</h4>
+  <p>First sibling paragraph</p>
+  <p>Second sibling paragraph</p>
+
+  <div class="box">
+    <p>This is <span>descendant text</span>.</p>
+  </div>
+
+</body>
+</html>

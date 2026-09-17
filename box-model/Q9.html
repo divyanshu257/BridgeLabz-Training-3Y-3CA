@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outline Form</title>
+
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    form{
+      width: 350px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    input,
+    textarea{
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 20px;
+      border: 1px solid gray;
+      border-radius: 6px;
+      box-sizing: border-box;
+      outline: 2px solid transparent;
+      outline-offset: 3px;
+    }
+
+    input:focus{
+      outline: 2px solid blue;
+    }
+
+    textarea:focus{
+      outline: 3px dashed green;
+      outline-offset: 5px;
+    }
+
+    button{
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+
+    <h2>Contact Form</h2>
+
+    <label>Name</label>
+    <input type="text" placeholder="Enter your name">
+
+    <label>Email</label>
+    <input type="email" placeholder="Enter your email">
+
+    <label>Message</label>
+    <textarea rows="5" placeholder="Enter your message"></textarea>
+
+    <button type="submit">Submit</button>
+
+  </form>
+
+</body>
+</html>

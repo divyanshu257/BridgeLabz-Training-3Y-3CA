@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav{
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover{
+      background-color: white;
+      color: #222;
+      border-color: white;
+    }
+
+    nav a.active{
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    main{
+      min-height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    footer{
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width: 700px){
+
+      nav{
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a{
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#" class="active">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <h1>Welcome to My Website</h1>
+    <p>Resize the browser below 700px to see the responsive navbar.</p>
+  </main>
+
+  <footer>
+    © 2026 My Website
+  </footer>
+
+</body>
+</html>

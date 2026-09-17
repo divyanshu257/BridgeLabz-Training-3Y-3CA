@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Background</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header{
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+    }
+
+    section{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .linear{
+      background: linear-gradient(to right, #2193b0, #6dd5ed);
+      background-attachment: fixed;
+    }
+
+    .radial{
+      background: radial-gradient(circle, #ff9966, #ff5e62);
+    }
+
+    footer{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 45px;
+      background-color: #222;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Gradient Background Webpage</h2>
+  </header>
+
+  <section class="linear">
+    <h1>Linear Gradient</h1>
+    <p>
+      A linear gradient creates a smooth transition between colors
+      in a straight direction.
+    </p>
+  </section>
+
+  <section class="radial">
+    <h1>Radial Gradient</h1>
+    <p>
+      A radial gradient starts from the center and spreads outward
+      in a circular shape.
+    </p>
+  </section>
+
+  <footer>
+    Gradient CSS Assignment
+  </footer>
+
+</body>
+</html>

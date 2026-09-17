@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shadows and Depth</title>
+
+  <style>
+    body{
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    h1{
+      text-align: center;
+      margin-top: 50px;
+      text-shadow: 2px 2px 4px gray;
+    }
+
+    .container{
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 60px;
+    }
+
+    .card{
+      width: 250px;
+      padding: 30px;
+      background-color: white;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .card1{
+      box-shadow: 2px 2px 5px gray;
+    }
+
+    .card2{
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    .card3{
+      box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .card:hover{
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Shadow Effects</h1>
+
+  <div class="container">
+
+    <div class="card card1">
+      <h2>Card 1</h2>
+      <p>This card has a simple shadow effect.</p>
+    </div>
+
+    <div class="card card2">
+      <h2>Card 2</h2>
+      <p>This card has a soft depth shadow.</p>
+    </div>
+
+    <div class="card card3">
+      <h2>Card 3</h2>
+      <p>This card has a stronger shadow effect.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>
