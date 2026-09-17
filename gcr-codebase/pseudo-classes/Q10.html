@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini UI Layout</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header{
+      background: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main{
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .card{
+      width: 700px;
+      background: white;
+      padding: 30px;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .card img{
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    form{
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input,
+    textarea{
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #aaa;
+      border-radius: 7px;
+    }
+
+    input:focus,
+    textarea:focus{
+      outline: 2px solid dodgerblue;
+      border-color: dodgerblue;
+    }
+
+    .buttons{
+      display: flex;
+      gap: 10px;
+    }
+
+    button{
+      padding: 12px 20px;
+      border: none;
+      border-radius: 7px;
+      background: dodgerblue;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover{
+      background: darkblue;
+      transform: translateY(-2px);
+    }
+
+    footer{
+      background: #222;
+      color: white;
+      padding: 18px;
+      text-align: center;
+    }
+
+    @media(max-width: 700px){
+
+      .card{
+        width: 100%;
+        flex-direction: column;
+      }
+
+      .card img{
+        width: 100%;
+        height: 220px;
+      }
+
+      form{
+        width: 100%;
+      }
+
+      .buttons{
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>Mini User Interface</h2>
+  </header>
+
+  <main>
+
+    <div class="card">
+
+      <img src="https://picsum.photos/400/400" alt="Profile">
+
+      <form>
+
+        <h2>Contact Us</h2>
+
+        <input type="text" placeholder="Enter your name">
+
+        <input type="email" placeholder="Enter your email">
+
+        <textarea rows="4" placeholder="Enter your message"></textarea>
+
+        <div class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 Mini UI Layout
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo Classes</title>
+
+  <style>
+    body{
+      font-family: Arial;
+      background: #f2f2f2;
+      margin: 0;
+    }
+
+    h1{
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      margin-top: 70px;
+    }
+
+    .example{
+      width: 200px;
+      padding: 25px;
+      background: white;
+      text-align: center;
+      border-radius: 10px;
+    }
+
+    a{
+      color: blue;
+      font-size: 18px;
+    }
+
+    a:hover{
+      color: red;
+    }
+
+    input{
+      padding: 10px;
+      width: 150px;
+    }
+
+    input:focus{
+      background-color: lightyellow;
+      border: 2px solid blue;
+      outline: none;
+    }
+
+    button{
+      padding: 10px 20px;
+      background: dodgerblue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:active{
+      background: darkblue;
+    }
+
+    li:nth-child(2){
+      color: red;
+      background: lightpink;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Pseudo Classes</h1>
+
+  <div class="container">
+
+    <div class="example">
+      <a href="#">Hover Me</a>
+      <p>:hover works when mouse is placed over an element.</p>
+    </div>
+
+    <div class="example">
+      <input type="text" placeholder="Click here">
+      <p>:focus works when an input is selected.</p>
+    </div>
+
+    <div class="example">
+      <button>Click Me</button>
+      <p>:active works while the button is being clicked.</p>
+    </div>
+
+    <div class="example">
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+      <p>:nth-child() selects a specific child.</p>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Animations</title>
+
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial;
+      background: #f2f2f2;
+    }
+
+    .container{
+      display: flex;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .moving-box{
+      width: 80px;
+      height: 80px;
+      background: blue;
+      animation: move 2s ease-in-out infinite alternate;
+    }
+
+    .ball{
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: red;
+      animation: bounce 1s ease-in-out 0.5s infinite alternate;
+    }
+
+    .text{
+      font-size: 28px;
+      font-weight: bold;
+      animation: changeColor 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes move{
+      from{
+        transform: translateX(-30px);
+      }
+
+      to{
+        transform: translateX(70px);
+      }
+    }
+
+    @keyframes bounce{
+      from{
+        transform: translateY(0);
+      }
+
+      to{
+        transform: translateY(-80px);
+      }
+    }
+
+    @keyframes changeColor{
+      from{
+        color: blue;
+      }
+
+      to{
+        color: red;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="moving-box"></div>
+
+    <div class="ball"></div>
+
+    <div class="text">
+      Animated Text
+    </div>
+
+  </div>
+
+</body>
+</html>

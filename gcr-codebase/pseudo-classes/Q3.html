@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Showcase</title>
+
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: Arial;
+      background: #f4f4f4;
+      margin: 0;
+    }
+
+    h1{
+      text-align: center;
+      margin: 40px;
+    }
+
+    .gallery{
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    figure{
+      margin: 0;
+      text-align: center;
+    }
+
+    .image-box{
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .image-box img{
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay{
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0);
+      transition: 0.3s;
+    }
+
+    .image-box:hover img{
+      transform: scale(1.1);
+    }
+
+    .image-box:hover .overlay{
+      background: rgba(0,0,0,0.4);
+    }
+
+    figcaption{
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @media(max-width: 700px){
+      .gallery{
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Image Showcase</h1>
+
+  <div class="gallery">
+
+    <figure>
+      <div class="image-box">
+        <img src="https://picsum.photos/400/300?random=1">
+        <div class="overlay"></div>
+      </div>
+      <figcaption>Nature</figcaption>
+    </figure>
+
+    <figure>
+      <div class="image-box">
+        <img src="https://picsum.photos/400/300?random=2">
+        <div class="overlay"></div>
+      </div>
+      <figcaption>Mountain</figcaption>
+    </figure>
+
+    <figure>
+      <div class="image-box">
+        <img src="https://picsum.photos/400/300?random=3">
+        <div class="overlay"></div>
+      </div>
+      <figcaption>City</figcaption>
+    </figure>
+
+    <figure>
+      <div class="image-box">
+        <img src="https://picsum.photos/400/300?random=4">
+        <div class="overlay"></div>
+      </div>
+      <figcaption>Travel</figcaption>
+    </figure>
+
+    <figure>
+      <div class="image-box">
+        <img src="https://picsum.photos/400/300?random=5">
+        <div class="overlay"></div>
+      </div>
+      <figcaption>Road</figcaption>
+    </figure>
+
+    <figure>
+      <div class="image-box">
+        <img src="https://picsum.photos/400/300?random=6">
+        <div class="overlay"></div>
+      </div>
+      <figcaption>Adventure</figcaption>
+    </figure>
+
+  </div>
+
+</body>
+</html>

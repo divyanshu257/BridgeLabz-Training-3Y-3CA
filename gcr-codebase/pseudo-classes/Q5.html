@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Styled Buttons</title>
+
+  <style>
+    body{
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f2f2f2;
+      font-family: Arial;
+    }
+
+    .buttons{
+      display: flex;
+      gap: 20px;
+    }
+
+    button{
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+
+    .primary{
+      background: dodgerblue;
+      color: white;
+      border: none;
+    }
+
+    .secondary{
+      background: gray;
+      color: white;
+      border: none;
+    }
+
+    .outline{
+      background: white;
+      color: dodgerblue;
+      border: 2px solid dodgerblue;
+    }
+
+    button:hover:not(:disabled){
+      transform: translateY(-4px);
+      box-shadow: 0 7px 15px rgba(0,0,0,0.25);
+    }
+
+    button:active:not(:disabled){
+      transform: scale(0.95);
+    }
+
+    button:focus{
+      outline: 3px solid orange;
+      outline-offset: 3px;
+    }
+
+    button:disabled{
+      background: lightgray;
+      color: gray;
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="buttons">
+
+    <button class="primary">Primary</button>
+
+    <button class="secondary">Secondary</button>
+
+    <button class="outline">Outline</button>
+
+    <button disabled>Disabled</button>
+
+  </div>
+
+</body>
+</html>

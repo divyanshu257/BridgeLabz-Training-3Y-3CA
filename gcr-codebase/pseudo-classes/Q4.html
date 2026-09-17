@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors</title>
+
+  <style>
+    body{
+      font-family: Arial;
+      margin: 0;
+      padding: 30px;
+    }
+
+    /* Element selector */
+    p{
+      font-size: 17px;
+    }
+
+    /* Class selector */
+    .special{
+      color: blue;
+      font-weight: bold;
+    }
+
+    /* ID selector */
+    #main-heading{
+      color: darkred;
+      text-align: center;
+    }
+
+    /* Attribute selector */
+    a[target="_blank"]{
+      color: green;
+    }
+
+    /* Child combinator */
+    .parent > p{
+      background: lightblue;
+      padding: 10px;
+    }
+
+    /* Adjacent sibling combinator */
+    h2 + p{
+      color: red;
+    }
+
+    /* General sibling combinator */
+    h3 ~ p{
+      font-style: italic;
+    }
+
+    /* Descendant combinator */
+    .box span{
+      color: purple;
+      font-weight: bold;
+    }
+
+    footer{
+      margin-top: 50px;
+      padding: 20px;
+      background: #222;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 id="main-heading">CSS Selectors Practice</h1>
+  </header>
+
+  <p>This paragraph uses an element selector.</p>
+
+  <p class="special">This paragraph uses a class selector.</p>
+
+  <a href="https://google.com" target="_blank">
+    Google
+  </a>
+
+  <div class="parent">
+    <p>Direct child paragraph</p>
+
+    <div>
+      <p>Nested paragraph</p>
+    </div>
+  </div>
+
+  <h2>Adjacent Selector</h2>
+  <p>This is immediately after h2.</p>
+
+  <h3>General Sibling Selector</h3>
+  <p>First sibling paragraph</p>
+  <p>Second sibling paragraph</p>
+
+  <div class="box">
+    <p>This contains a <span>descendant span</span>.</p>
+  </div>
+
+  <footer>
+    CSS Selectors Practice Page
+  </footer>
+
+</body>
+</html>
