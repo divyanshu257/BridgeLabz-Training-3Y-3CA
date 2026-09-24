@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Cards</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f1f5f9;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      flex: 0 0 calc((100% - 60px) / 4);
+      padding: 25px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px #0001;
+      transition: background-color 0.3s ease;
+    }
+
+    .card:hover {
+      background: #bfdbfe;
+    }
+
+    @media (max-width: 900px) {
+      .card {
+        flex-basis: calc((100% - 20px) / 2);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        flex-basis: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Responsive Cards</h1>
+
+    <div class="cards">
+      <div class="card">
+        <h2>Card One</h2>
+        <p>Explore flexible page layouts.</p>
+      </div>
+
+      <div class="card">
+        <h2>Card Two</h2>
+        <p>Adapt content for tablets.</p>
+      </div>
+
+      <div class="card">
+        <h2>Card Three</h2>
+        <p>Keep mobile content readable.</p>
+      </div>
+
+      <div class="card">
+        <h2>Card Four</h2>
+        <p>Use spacing for visual balance.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

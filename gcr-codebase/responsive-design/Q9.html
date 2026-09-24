@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Design Principles</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #172033;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: auto;
+      padding: 35px 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .principle {
+      padding: 28px;
+      background: #e0f2fe;
+      border-radius: 14px;
+      transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    .principle:hover {
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .principle p {
+      line-height: 1.6;
+    }
+
+    .principle pre {
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      padding: 12px;
+      background: #ffffffa8;
+      color: #172033;
+      border-radius: 7px;
+    }
+
+    @media (max-width: 850px) {
+      .principles {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .principles {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Responsive Design Principles</h1>
+
+    <div class="principles">
+      <div class="principle">
+        <h2>Fluid Layouts</h2>
+        <p>Use flexible widths so content fits the available space.</p>
+        <pre><code>.container {
+  width: 90%;
+  max-width: 1200px;
+}</code></pre>
+      </div>
+
+      <div class="principle">
+        <h2>Flexible Media</h2>
+        <p>Keep images inside their containers without stretching them.</p>
+        <pre><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+      </div>
+
+      <div class="principle">
+        <h2>Breakpoints</h2>
+        <p>Change the layout when the screen becomes narrower.</p>
+        <pre><code>@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
