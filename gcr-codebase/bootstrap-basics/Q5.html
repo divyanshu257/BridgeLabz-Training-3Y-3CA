@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ink & Ideas Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bs-primary: #7c3aed;
+      --bs-font-sans-serif: "Nunito", sans-serif;
+    }
+
+    body {
+      font-family: var(--bs-font-sans-serif);
+      background: #f8f5ff;
+    }
+
+    .blog-header {
+      background: var(--bs-primary);
+    }
+
+    h1,
+    .post-title {
+      color: var(--bs-primary);
+    }
+
+    .blog-header h1 {
+      color: white;
+    }
+
+    .btn-primary {
+      --bs-btn-bg: #7c3aed;
+      --bs-btn-border-color: #7c3aed;
+      --bs-btn-hover-bg: #6025bf;
+      --bs-btn-hover-border-color: #6025bf;
+    }
+
+    .post-card {
+      height: 100%;
+      border-top: 4px solid var(--bs-primary);
+      transition: transform 0.3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-6px);
+    }
+  </style>
+</head>
+<body>
+  <header class="blog-header text-white text-center py-5">
+    <div class="container">
+      <h1 class="fw-bold">Ink & Ideas</h1>
+      <p class="lead mb-0">Thoughts on design, technology, and creativity</p>
+    </div>
+  </header>
+
+  <main class="container py-5">
+    <h2 class="text-center fw-bold mb-4">Latest Posts</h2>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <article class="card post-card shadow-sm">
+          <div class="card-body p-4">
+            <p class="text-muted">September 20, 2026</p>
+            <h3 class="post-title h4 fw-bold">Getting Started with Web Design</h3>
+            <p>Learn the basic ideas behind clean and responsive websites.</p>
+            <a href="#post-one" class="btn btn-primary">Read More</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-6">
+        <article class="card post-card shadow-sm">
+          <div class="card-body p-4">
+            <p class="text-muted">September 22, 2026</p>
+            <h3 class="post-title h4 fw-bold">Why Responsive Layouts Matter</h3>
+            <p>See how flexible layouts improve the experience on every device.</p>
+            <a href="#post-two" class="btn btn-primary">Read More</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="blog-header text-white text-center py-4">
+    <p class="mb-0">&copy; 2026 Ink & Ideas</p>
+  </footer>
+</body>
+</html>
