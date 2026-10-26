@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <style>
+        input {
+            display: block;
+            margin: 8px 0;
+            padding: 8px;
+            border: 2px solid gray;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Registration</h2>
+
+    <form id="studentForm" novalidate>
+        <input id="name" placeholder="Name">
+        <div id="nameError" class="error"></div>
+
+        <input id="email" placeholder="Email">
+        <div id="emailError" class="error"></div>
+
+        <input id="phone" placeholder="Phone">
+        <div id="phoneError" class="error"></div>
+
+        <input id="password" type="password" placeholder="Password">
+        <div id="passwordError" class="error"></div>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script src="Q2.js"></script>
+</body>
+</html>
